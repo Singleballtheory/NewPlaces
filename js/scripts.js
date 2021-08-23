@@ -38,60 +38,55 @@ travelGuide.addLocation(newLocation2);
 travelGuide.addLocation(newLocation3);
 travelGuide.addLocation(newLocation4);
 
+const canaKeys = Object.keys(newLocation3);
+let canaString = "";
+canaKeys.forEach(function(key) {
+  canaString = canaString.concat(key + ": " + newLocation3[key] + "\n"); 
+});
 
-
-// function AddressBook() {
-//   this.contacts = {};
+// for (const key in contact) {
+//   if (contact.hasOwnProperty(key)) {
+//     console.log(contact[key]);
+//   }
 // }
 
-// AddressBook.prototype.addContact = function(contact) {
-//   this.contacts[contact.firstName] = contact;
-// };
 
-// function Contact(firstName, lastName, phoneNumber) {
-//   this.firstName = firstName;
-//   this.lastName = lastName;
-//   this.phoneNumber = phoneNumber;
-// }
 
-// let addressBook = new AddressBook();
-// let contact = new Contact("Ada", "Lovelace", "503-555-0100");
-// let contact2 = new Contact("Grace", "Hopper", "503-555-0199");
-// addressBook.addContact(contact);
-// addressBook.addContact(contact2);
-// let us = {name: "United States of America"};
-// let mx = {name: "Mexico"};
-// let cn = {name: "Canada"};
-// let fr = {name: "France"};
-// let uk = {name: "United Kingdom"};
-
-// let location = {name: "The World", countries: [us, mx, cn, fr, uk] };
-
-// function TravelGuide() {
-//   this.locations = {};
-//   // this.currentId = 0;
-// }
-
-// TravelGuide.prototype.addLocation = function(location) {
-//   // location.id = this.assignId();
-//   this.locations[location.countryName] = location;
-// };
-
-// function Location (countryName, landmark, timeOfYear, notes) {
-//   this.countryName = countryName;
-//   this.landmark = landmark;
-//   this.timeOfYear = timeOfYear;
-//   this.notes = notes;
-// }
-
-// let travelGuide = new TravelGuide();
-// let location = new Location("United States of America");
-// travelGuide.addLocation(location);
+$(document).ready(function() {
+  $(".clickable").click(function() {
+//     function showLocation(locationId) {
+//       const place = travelGuide.findLocation(locationId);
+//       $("#locInfo").show();
+//       $(".countryName").text(location.countryName);
+//       $(".landmark").text(location.landmark);
+//       $(".timeOfYear").text(location.timeOfYear);
+//       $(".notes").text(location.notes);
+//     }
+    $("#locInfo").text(canaString).val("");
+    
+  });
+});
 
 
 
-// let addressBook = new AddressBook();
-// let contact = new Contact("Ada", "Lovelace", "503-555-1111", "ada@geocities.com");
-// let contact2 = new Contact("Grace", "Hopper", "503-555-0199", "grace@aol.com");
-// addressBook.addContact(contact);
-// addressBook.addContact(contact2);
+// let tomatoes = { name: "Tomatoes", price: 2.99 };
+// let cucumbers = { name: "Cucumbers", price: 0.99 };
+// let onions = { name: "Onions", price: 0.79 };
+
+// let groceryStore = { name: "Michael's corner market", products: [tomatoes, cucumbers, onions] };
+
+// let iPhone = { name: "iPhone", price: 699 };
+// let android = { name: "Android", price: 499 };
+// let windowsPhone = { name: "Windows Phone", price: 399 };
+
+// let phoneStore = { name: "RadioShack", products: [iPhone, android, windowsPhone] };
+
+// let stores = [groceryStore, phoneStore];
+
+// stores.forEach(function(store) {
+//   console.log(store.name + " sells:");
+//   store.products.forEach(function(product) {
+//     console.log(product.name);
+//   });
+//   console.log("\n");
+// });
